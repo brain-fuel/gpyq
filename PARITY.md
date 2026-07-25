@@ -15,7 +15,9 @@ reused). The root `main` is relocated to `cmd/yq/` so the binary is `yq`. Builds
 pinned upstream binary is **10/10 byte-identical** across yaml/json/props/xml/csv
 output and sort/path/to_entries/assignment/null-doc/json-input operators.
 
-**Phase 2 — Go+ authorship (next).** Convert `pkg/yqlib` + `cmd` to Go+ (`.gp`),
+**Phase 2 — Go+ authorship: DONE.** 115 .go sources converted to Go+ (pkg/yqlib engine + all operators + multi-format codecs, cmd, cmd/yq main); 41 //go:build feature-flag files (yq_no*, GOOS) stay .go. Zero enums — yq's kinds are wire-coupled bitsets/structs (Format/Kind/Style/operationType), EncodeHint's zero value is load-bearing; the honest gptask-precedent outcome. Zero goplus codegen errors under released v0.139.0. gen-check clean, deterministic, build/vet/test green, binary parity byte-identical across ~60 cases.
+
+**Phase 2 (old placeholder).** Convert `pkg/yqlib` + `cmd` to Go+ (`.gp`),
 pin released goplus v0.139.0, keep `gen -check` clean and parity intact. Enum
 idiomata only where genuine scalar sums exist and the wire format is preserved.
 
