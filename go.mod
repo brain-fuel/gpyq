@@ -43,6 +43,6 @@ go 1.26.0
 // Go+ toolchain (released; carries the codegen fixes for real industry-tool rewrites).
 tool goforge.dev/goplus/cmd/goplus
 
-require goforge.dev/goplus/std v0.204.0
+require goforge.dev/goplus/std v0.207.0
 
 require goforge.dev/goplus v0.139.0 // indirect
